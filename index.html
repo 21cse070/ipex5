@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    if (document.myForm.colour.value=="0") 
+     {
+         alert("Please Select colour");
+     }
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  let num = document.forms["myForm"]["t"].value;
+  if (num == "") {
+    alert("telephone must be filled out");
+    return false;
+  }
+  let e = document.forms["myForm"]["email"].value;
+  if (e == "") {
+    alert("email must be filled out");
+    return false;
+  }
+  
+}
+function check() {
+ 
+  document.getElementById("honda").checked = true;
+  }
+  function check1() {
+  document.getElementById("proton").checked = true;
+  }
+  function check2() {
+  document.getElementById("ferri").checked = true;
+  }
+  function check3() {
+  document.getElementById("ford").checked = true;
+}
+function uncheck() {
+  
+  document.getElementById("honda").checked = false;
+  }
+  function uncheck1() {
+  document.getElementById("proton").checked = false;
+  }
+  function uncheck2() {
+  document.getElementById("ferri").checked = false;
+  }
+  function uncheck3() {
+  document.getElementById("ford").checked = false;
+}
+</script>
+
+</head>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form name="myForm" onsubmit="return validateForm()" method="post">
+    <p1> what car would you like to buy </p1> <br>
+    <input type="radio" id="honda" name="car" value="honda">
+  <label>honda</label><br>
+  <input type="radio" id="proton" name="car" value="proton">
+  <label >proton</label><br>
+  <input type="radio" id="ferri" name="car" value="ferri">
+  <label >ferri</label> <br>
+  <input type="radio" id="ford" name="car" value="ford">
+  <label >ford</label> <br>
+  <button onclick="check()">Check "honda"</button>
+<button onclick="uncheck()">Uncheck "honda"</button>
+<button onclick="check1()">Check "proton"</button>
+<button onclick="uncheck1()">Uncheck "proton"</button>
+<button onclick="check2()">Check "ferri"</button>
+<button onclick="uncheck2()">Uncheck "ferri"</button>
+<button onclick="check3()">Check "ford"</button>
+<button onclick="uncheck3()">Uncheck "ford"</button> 
+<br>
+ <label>what colour do you want on your bank</label>
+ 
+ <br>
+ <select name="colour">
+  <option value="0">select</option>   
+  <option>blue</option>
+  <option >pink</option>
+  <option>red</option>
+  <option>orange</option>
+</select><br>
+<br>
+ <label for="name"> Enter the specification for your preferred car</label><br>
+ <br>
+ 
+  
+  <label for="name"> tell us how to get in touch with you</label><br>
+  <br>
+  <br>
+  Name: <input type="text" name="fname">
+   <br>
+  Telephone <input type="text" id="n" name="t"><br>
+   <br>
+   email <input type="text" name="email" ><br>
+   <br>
+    <label>please contact me as soon as possible </lable> <br>
+   <br>
+   <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">My Mail:abc@gmail.com</a>
+   <br> <br>
+  <input type="submit" value="Submit">
+</form>
